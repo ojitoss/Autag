@@ -11,6 +11,10 @@
   ],
   "author": "ojitos",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ojitoss/Autag"
+  },
   "dependencies": {
     "commander": "^8.1.0",
     "fs": "0.0.1-security",

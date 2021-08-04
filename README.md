@@ -1,4 +1,6 @@
 # atuag - Automatic code generator
+[gitHub repository](https://github.com/ojitoss/Autag)
+
 autag is a tool that generates code automatically through the terminal.
 
 ## Parts of documentation:
