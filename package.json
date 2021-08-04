@@ -1,0 +1,19 @@
+{
+  "name": "autag",
+  "version": "1.0.3",
+  "description": "automatic code generator",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {},
+  "keywords": [
+    "autag",
+    "auto code"
+  ],
+  "author": "ojitos",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^8.1.0",
+    "fs": "0.0.1-security",
+    "inquirer": "^8.1.2"
+  }
+}
