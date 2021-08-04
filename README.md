@@ -226,8 +226,8 @@ Write a files ignores of npm: test.js
 test.js
 ```
 
-## npmignore - format
-If you chose **npmignore** then on the console I will say the next question:
+## gitignore - format
+If you chose **gitignore** then on the console I will say the next question:
 ```
 Writes a files ignores of git
 ```
