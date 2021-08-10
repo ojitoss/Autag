@@ -4,12 +4,54 @@
 autag is a tool that generates code automatically through the terminal.
 
 ## Parts of documentation:
+  * [Upgrades](#Upgrades)
+  * [Changelog](#Changelog)
   * [Installation and Usage](#Usage)
-  * [md - format](#md)
-  * [npmignore - format](#npmignore)
-  * [gitignore - format](#gitignore)
-  * [license - file](#license)
+  * [File](#file)
+    * [md](#md)
+  * [Ignore](#ignore)
+    * [npm](#npm)
+    * [git](#git)
+  * [mkdir](#mkdir)
+    * [normal](#normal)
+  * [License](#license)
+    * [license](#license)
   * [license sofware](#sofware)
+____
+
+## Upgrades:    
+*version: 2.0.0*
+  * The tool interface has been restructured
+  * More code was ordered
+  * Add mkdir option to add folders
+  * Doumentacoion was improved
+____
+
+## Changelog:
+2.0.0
+  * The tool interface has been restructured
+  * More code was ordered
+  * Add mkdir option to add folders
+  * Doumentacoion was improved
+
+1.2.3
+  * Fixed a small error with the documentation
+
+1.2.2
+  * Add the github repository
+
+1.0.3
+  * Fixed a small error with the documentation
+
+1.0.2
+  * Add the gitignore and npmignore formats
+
+1.0.1
+  * Fixed a small error with the documentation
+
+1.0.0
+  * You could create md and LICENSE files
+____
 
 ## Installation:
     npm install autag
@@ -21,13 +63,24 @@ npx autag
 ```
 After that you will see the following After that you will see the following:
 ```
-Select a format
-md
+Select the option you want execute
+file
+ignore
+mkdir
 license
 ```
+___
 
-## md - format:
-If you chose **md** then on the console I will say the next:
+## file:
+If you chose **file** then on the console I will say the next:
+```
+Select a format
+md
+```
+___
+
+## md:
+If you chose **file & md** then on the console I will say the next:
 ```
 Write a file name
 ```
@@ -57,6 +110,45 @@ title 5
 title 6
 ```
 
+Then he will ask you the following:
+```
+Write a title
+```
+
+## Explame:
+### Console:
+```
+Select the option you want to execute: file
+Select a format: md
+Write a file: hello
+Select a title type: title 1
+Write a title: hello!
+```
+### This will write to the 'hello.md' file:
+```md
+# hello!
+```
+
+If you chose **paragraph** then on the console I will say the next:
+```
+Write a paragraph
+```
+
+## Explame: 
+### Console: 
+```
+Select the option you want to execute: file
+Select a format: md
+Write a file: hello
+Write a paragraph: hello!
+```
+
+### This will write to the 'hello.md' file:
+```md
+hello!
+```
+
+If you chose **block** then on the console I will say the next:
 Then he will ask you this:
 ```
 Select a type block
@@ -72,6 +164,7 @@ Write a data block
 ## Explame:
 ### Console:
 ```
+Select the option you want to execute: file
 Select a format: md
 Write a file: hello
 Select to type text: block
@@ -98,6 +191,7 @@ Write a row
 ## Explame: 
 ### Console
 ```
+Select the option you want to execute: file
 Select a format: md
 Write a file: hello
 Select to type text: board
@@ -127,6 +221,7 @@ Write a data list
 ## Explame: 
 ### Console
 ```
+Select the option you want to execute: file
 Select a format: md
 Write a file: hello
 Select to type text: list
@@ -139,7 +234,7 @@ Write a data list: Hello!
 * Hello!
 ```
 
-If you chose **paragraph** you will have the following message on the console:
+If you chose **link** you will have the following message on the console:
 ```
 Write a link name
 ```
@@ -152,6 +247,7 @@ Write a link
 ## Explame: 
 ### Console
 ```
+Select the option you want to execute: file
 Select a format: md
 Write a file: hello
 Select to type text: link
@@ -164,7 +260,7 @@ Write a link: https://hello
 [Hello](https://hello)
 ```
 
-If you chose **paragraph** you will have the following message on the console:
+If you chose **image** you will have the following message on the console:
 ```
 Write a image name
 ```
@@ -177,9 +273,10 @@ Write a link to image
 ## Explame: 
 ### Console
 ```
+Select the option you want to execute: file
 Select a format: md
 Write a file: hello
-Select to type text: paragraph
+Select to type text: image
 Write a image name: Hello
 Write a link to image: https://image
 ```
@@ -189,7 +286,7 @@ Write a link to image: https://image
 ![Hello](https://image)
 ```
 
-If you chose **paragraph** you will have the following message on the console:
+If you chose **quote** you will have the following message on the console:
 ```
 Write a text to quote
 ```
@@ -197,6 +294,7 @@ Write a text to quote
 ## Explame: 
 ### Console
 ```
+Select the option you want to execute: file
 Select a format: md
 Write a file: hello
 Select to type text: quote
@@ -207,9 +305,19 @@ Write a text to quote: Hello!
 ```md
 > Hello!
 ```
+___
 
-## npmignore - format
-If you chose **npmignore** then on the console I will say the next question:
+## ignore:
+If you chose **ignore** then on the console I will say the next:
+```
+Select a files ignores tool
+npm 
+git
+```
+___
+
+## npm:
+If you chose **ignore & npm** then on the console I will say the next question:
 ```
 Writes a files ignores of npm
 ```
@@ -217,7 +325,8 @@ Writes a files ignores of npm
 ## Explame:
 ### Console: 
 ```
-Select a format: npmignore
+Select the option you want to execute: ignore
+Select a files ignores tool: npm
 Write a files ignores of npm: test.js
 ```
 
@@ -225,9 +334,10 @@ Write a files ignores of npm: test.js
 ```
 test.js
 ```
+___
 
-## gitignore - format
-If you chose **gitignore** then on the console I will say the next question:
+## git:
+If you chose **ignore & git** then on the console I will say the next question:
 ```
 Writes a files ignores of git
 ```
@@ -235,7 +345,8 @@ Writes a files ignores of git
 ## Explame:
 ### Console: 
 ```
-Select a format: gitignore
+Select the option you want to execute: ignore
+Select a files ignores tool: git
 Write a files ignores of git: test.js
 ```
 
@@ -243,34 +354,63 @@ Write a files ignores of git: test.js
 ```
 test.js
 ```
+___
 
-## license - file:
+## mkdir:
+If you chose **mkdir** then on the console I will say the next:
+```
+Select a type folder:
+normal
+```
+___
+
+## normal:
+If you chose **mkdir & normal** then on the console I will say the next:
+```
+Write a name folder
+```
+
+## Explame: 
+### Console:
+```
+Select the option you want to execute: mkdir
+Select type folder: normal
+Write a name folder: hello
+```
+create a folder 'hello'
+___
+
+## license:
 If you chose **license** then on the console I will say the next question:
 ```
 Select to license
 mit
 ```
-If you chose **mit** then on the consoel I will say next question:
+___
+
+# mit:
+If you chose **license & mit** then on the consoel I will say next question:
 ```
-username:
+Write a your name:
 ```
 You will have to put your name.
 
 After of question: 
 ```
-year:
+Write actual year:
 ```
 You must put the year where the software was created.
 
 ### Explame:
 ```
 Select to format: license
-nameuser: ojitos
-year: 2021
+Select to license: mit
+Write a your name: ojitos
+Write actual year: 2021
+```
 
-This will be done in the LICENSE file: 
-
-
+### This will write to the 'LICENSE' file:
+```
 MIT License
 
 Copyright (c) 2021 ojitos
@@ -293,8 +433,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+___
 
-## Sofware license:
+## sofware license:
 ```
 MIT License
 
