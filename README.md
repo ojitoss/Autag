@@ -12,6 +12,7 @@ autag is a tool that generates code automatically through the terminal.
   * [Ignore](#ignore)
     * [npm](#npm)
     * [git](#git)
+    * [eslint](#eslint)
   * [mkdir](#mkdir)
     * [normal](#normal)
   * [License](#license)
@@ -351,6 +352,26 @@ Write a files ignores of git: test.js
 ```
 
 ### This will write to the '.gitignore' file:
+```
+test.js
+```
+___
+
+## eslint:
+If you chose **ignore & eslint** then on the console I will say the next question:
+```
+Writes a files ignores of eslint
+```
+
+## Explame:
+### Console: 
+```
+Select the option you want to execute: ignore
+Select a files ignores tool: eslint
+Write a files ignores of git: test.js
+```
+
+### This will write to the '.eslintignore' file:
 ```
 test.js
 ```

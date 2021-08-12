@@ -57,6 +57,9 @@ inquirer.prompt([{
                 },{
                     key: "git",
                     value: "git"
+                },{
+                    key: "eslint",
+                    value: "eslint"
                 }
             ]
         }]).then(anweser2 => {
@@ -65,6 +68,9 @@ inquirer.prompt([{
             }
             if (anweser2.format === "git") {
                 ignore.git();
+            }
+            if (anweser2.format === "eslint") {
+                ignore.eslint();
             }
         });
     }
