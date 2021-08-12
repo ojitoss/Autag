@@ -21,14 +21,18 @@ autag is a tool that generates code automatically through the terminal.
 ____
 
 ## Upgrades:    
-*version: 2.0.0*
-  * The tool interface has been restructured
-  * More code was ordered
-  * Add mkdir option to add folders
-  * Doumentacoion was improved
+*version: 2.1.1*
+  * Eslint was added to the ignore
+  * Fixed a small error with the documentation
 ____
 
 ## Changelog:
+2.1.1
+  * Fixed a small error with the documentation
+
+2.0.1
+  * Eslint was added to the ignore
+
 2.0.0
   * The tool interface has been restructured
   * More code was ordered
