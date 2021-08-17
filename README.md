@@ -17,16 +17,21 @@ autag is a tool that generates code automatically through the terminal.
     * [normal](#normal)
   * [License](#license)
     * [license](#license)
+  * [translate](#translate)
+    * [file](#file-translate)
+    * [text](#text-translate)
   * [license sofware](#sofware)
 ____
 
 ## Upgrades:    
-*version: 2.1.1*
-  * Eslint was added to the ignore
-  * Fixed a small error with the documentation
+*version: 2.2.1*
+  * Translation options added
 ____
 
 ## Changelog:
+2.2.1
+  * Translation options added
+  
 2.1.1
   * Fixed a small error with the documentation
 
@@ -457,6 +462,69 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
+___
+
+## translate:
+If you chose **translate** then on the console I will say the next:
+```
+Select the type of translation you are going to execute
+file
+text
+```
+___
+
+## file-translate:
+If you chose **translate & file** then on the console I will say the next:
+```
+Select the language you want to translate
+en 
+es
+```
+
+Then he will ask you this:
+```
+Write the file to translate
+```
+
+## Explame:
+### Console: 
+```
+Select the option you want to execute: translate
+Select the language you want to translate: es
+Write the file to translate: test.js
+```
+
+### This will write to the console:
+```
+consola.log("Hola")
+```
+___
+
+## text-translate:
+If you chose **translate & file** then on the console I will say the next:
+```
+Select the language you want to translate
+en 
+es
+```
+
+Then he will ask you this:
+```
+Write the text to translate
+```
+
+## Explame:
+### Console: 
+```
+Select the option you want to execute: translate
+Select the language you want to translate: es
+Write the text to translate: Hello
+```
+
+### This will write to the console:
+```
+Hola
 ```
 ___
 

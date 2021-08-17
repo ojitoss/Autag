@@ -5,7 +5,7 @@ const file = new autag.fileManager();
 const ignore = new autag.ignoreManager();
 const license = new autag.licenseManager();
 const mkdir = new autag.mkdirManager();
-const fs = require("fs");
+const translate = new autag.translateManager();
 const inquirer = require('inquirer');
 
 inquirer.prompt([{
@@ -25,6 +25,9 @@ inquirer.prompt([{
         },{
             key: "license",
             value: "license"
+        },{
+            key: "translate",
+            value: "translate"
         }
     ]
 }]).then(anweser => {
@@ -105,6 +108,29 @@ inquirer.prompt([{
         }]).then(anweser2 => {
             if (anweser2.type === "mit") {
                 license.mit();
+            }
+        });
+    }
+    if (anweser.options === "translate") {
+        inquirer.prompt([{
+            type: "list",
+            name: "type",
+            message: "Select the type of translation you are going to execute",
+            choices: [
+                {
+                    key: "file",
+                    value: "file"
+                },{
+                    key: "text",
+                    value: "text"
+                }
+            ]
+        }]).then(anweser2 => {
+            if (anweser2.type === "file") {
+                translate.file();
+            }
+            if (anweser2.type === "text") {
+                translate.text();
             }
         });
     }
