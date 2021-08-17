@@ -1,6 +1,6 @@
 {
   "name": "autag",
-  "version": "2.1.1",
+  "version": "2.2.1",
   "description": "automatic code generator",
   "main": "index.js",
   "bin": "index.js",
