@@ -19,7 +19,7 @@ module.exports = {
             ]
         },{
             name: "data",
-            message: "Write the text to translatee"
+            message: "Write the text to translate"
         }]).then(anweser => {
             if (anweser.lang === "en") {
                 translate(anweser.data, {

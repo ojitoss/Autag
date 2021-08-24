@@ -18,17 +18,23 @@ autag is a tool that generates code automatically through the terminal.
   * [License](#license)
     * [license](#license)
   * [translate](#translate)
-    * [file](#file-translate)
     * [text](#text-translate)
+  * [rename](#rename)
+    * [normal](#normal-rename)
   * [license sofware](#sofware)
 ____
 
 ## Upgrades:    
-*version: 2.2.1*
-  * Translation options added
+*version: 2.3.2*
+  * Rename options added
+  * Remove the file option in translate because it did not work
 ____
 
 ## Changelog:
+2.2.3 
+  * Rename options added
+  * Remove the file option in translate because it did not work
+
 2.2.1
   * Translation options added
   
@@ -474,33 +480,6 @@ text
 ```
 ___
 
-## file-translate:
-If you chose **translate & file** then on the console I will say the next:
-```
-Select the language you want to translate
-en 
-es
-```
-
-Then he will ask you this:
-```
-Write the file to translate
-```
-
-## Explame:
-### Console: 
-```
-Select the option you want to execute: translate
-Select the language you want to translate: es
-Write the file to translate: test.js
-```
-
-### This will write to the console:
-```
-consola.log("Hola")
-```
-___
-
 ## text-translate:
 If you chose **translate & file** then on the console I will say the next:
 ```
@@ -514,17 +493,36 @@ Then he will ask you this:
 Write the text to translate
 ```
 
+## rename:
+If you chose **rename** then on the console I will say the next:
+```
+Select the type of rename
+normal
+```
+___
+
+## normal-rename:
+If you chose **translate & file** then on the console I will say the next:
+```
+Write file to rename
+```
+
+Then he will ask you this:
+```
+Write new file rename
+```
+
 ## Explame:
 ### Console: 
 ```
-Select the option you want to execute: translate
-Select the language you want to translate: es
-Write the text to translate: Hello
+Select the option you want to execute: rename
+Write file to rename: test.js
+Write new file rename: testing.js
 ```
 
-### This will write to the console:
+### Now the file is called:
 ```
-Hola
+testing.js
 ```
 ___
 

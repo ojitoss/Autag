@@ -4,7 +4,9 @@
   "description": "automatic code generator",
   "main": "index.js",
   "bin": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "nodemon ."
+  },
   "keywords": [
     "autag",
     "auto code"
@@ -17,8 +19,10 @@
   },
   "dependencies": {
     "@k3rn31p4nic/google-translate-api": "^1.1.1",
-    "commander": "^8.1.0",
     "fs": "0.0.1-security",
     "inquirer": "^8.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }

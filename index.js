@@ -6,6 +6,7 @@ const ignore = new autag.ignoreManager();
 const license = new autag.licenseManager();
 const mkdir = new autag.mkdirManager();
 const translate = new autag.translateManager();
+const rename = new autag.renameManager();
 const inquirer = require('inquirer');
 
 inquirer.prompt([{
@@ -28,6 +29,9 @@ inquirer.prompt([{
         },{
             key: "translate",
             value: "translate"
+        },{
+            key: "rename",
+            value: "rename"
         }
     ]
 }]).then(anweser => {
@@ -118,19 +122,30 @@ inquirer.prompt([{
             message: "Select the type of translation you are going to execute",
             choices: [
                 {
-                    key: "file",
-                    value: "file"
-                },{
                     key: "text",
                     value: "text"
                 }
             ]
         }]).then(anweser2 => {
-            if (anweser2.type === "file") {
-                translate.file();
-            }
             if (anweser2.type === "text") {
                 translate.text();
+            }
+        });
+    }
+    if (anweser.options === "rename") {
+        inquirer.prompt([{
+            type: "list",
+            name: "type",
+            message: "Select to type of rename",
+            choices: [
+                {
+                    key: "normal",
+                    value: "normal"
+                }
+            ]
+        }]).then(anweser2 => {
+            if (anweser2.type === "normal") {
+                rename.normal();
             }
         });
     }
