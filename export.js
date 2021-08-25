@@ -4,5 +4,6 @@ module.exports = {
     licenseManager: require('./functions/license/global.js'),
     mkdirManager: require('./functions/mkdir/global.js'),
     translateManager: require('./functions/translate/global.js'),
-    renameManager: require('./functions/rename/global.js')
+    renameManager: require('./functions/rename/global.js'),
+    removeManager: require('./functions/remove/global.js')
 }

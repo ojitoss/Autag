@@ -7,6 +7,7 @@ const license = new autag.licenseManager();
 const mkdir = new autag.mkdirManager();
 const translate = new autag.translateManager();
 const rename = new autag.renameManager();
+const remove = new autag.removeManager()
 const inquirer = require('inquirer');
 
 inquirer.prompt([{
@@ -32,6 +33,9 @@ inquirer.prompt([{
         },{
             key: "rename",
             value: "rename"
+        },{
+            key: "remove",
+            value: "remove"
         }
     ]
 }]).then(anweser => {
@@ -146,6 +150,23 @@ inquirer.prompt([{
         }]).then(anweser2 => {
             if (anweser2.type === "normal") {
                 rename.normal();
+            }
+        });
+    }
+    if (anweser.options === "remove") {
+        inquirer.prompt([{
+            type: "list",
+            name: "type",
+            message: "Select to remove",
+            choices: [
+                {
+                    key: "normal",
+                    value: "normal"
+                }
+            ]
+        }]).then(anweser2 => {
+            if (anweser2.type === "normal") {
+                remove.normal();
             }
         });
     }

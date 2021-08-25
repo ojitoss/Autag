@@ -21,17 +21,25 @@ autag is a tool that generates code automatically through the terminal.
     * [text](#text-translate)
   * [rename](#rename)
     * [normal](#normal-rename)
+  * [remove](#remove)
+    * [normal](#normal-remove)
   * [license sofware](#sofware)
 ____
 
 ## Upgrades:    
-*version: 2.3.2*
-  * Rename options added
-  * Remove the file option in translate because it did not work
+*version: 2.4.3*
+  * Remove options added
+  * Fixed a small error with the documentation
+  * CHANGELOG.md file added
 ____
 
 ## Changelog:
-2.2.3 
+2.4.3
+  * Remove options added
+  * Fixed a small error with the documentation
+  * CHANGELOG.md file added
+
+2.3.2 
   * Rename options added
   * Remove the file option in translate because it did not work
 
@@ -502,7 +510,7 @@ normal
 ___
 
 ## normal-rename:
-If you chose **translate & file** then on the console I will say the next:
+If you chose **rename & normal** then on the console I will say the next:
 ```
 Write file to rename
 ```
@@ -516,6 +524,7 @@ Write new file rename
 ### Console: 
 ```
 Select the option you want to execute: rename
+Select option of rename: normal
 Write file to rename: test.js
 Write new file rename: testing.js
 ```
@@ -523,6 +532,34 @@ Write new file rename: testing.js
 ### Now the file is called:
 ```
 testing.js
+```
+___
+
+## remove:
+If you chose **remove** then on the console I will say the next:
+```
+Select to remove
+normal
+```
+___
+
+## normal-remove:
+If you chose **remove & normal** then on the console I will say the next:
+```
+Write file remove
+```
+
+## Explame:
+### Console: 
+```
+Select the option you want to execute: remove
+Select option remove: normal
+Write file remove: test.js
+```
+
+### Now the file is called:
+```
+test.js
 ```
 ___
 
