@@ -1,10 +1,12 @@
 ## Upgrades:    
-*version: 2.5.4*
-  * Read options added
+*version: 2.5.5*
   * Fixed a small error with the documentation
 ____
 
 ## Changelog:
+2.5.5
+  * Fixed a small error with the documentation
+
 2.5.4
   * Read options added
   * Fixed a small error with the documentation
