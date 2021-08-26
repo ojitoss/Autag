@@ -23,17 +23,22 @@ autag is a tool that generates code automatically through the terminal.
     * [normal](#normal-rename)
   * [remove](#remove)
     * [normal](#normal-remove)
+  * [read](#read)
+    * [normal](#normal-read)
   * [license sofware](#sofware)
 ____
 
 ## Upgrades:    
-*version: 2.4.3*
-  * Remove options added
+*version: 2.5.4*
+  * Read options added
   * Fixed a small error with the documentation
-  * CHANGELOG.md file added
 ____
 
 ## Changelog:
+2.5.4
+  * Read options added
+  * Fixed a small error with the documentation
+
 2.4.3
   * Remove options added
   * Fixed a small error with the documentation
@@ -92,6 +97,10 @@ file
 ignore
 mkdir
 license
+translate
+rename
+remove
+read
 ```
 ___
 
@@ -433,7 +442,7 @@ mit
 ___
 
 # mit:
-If you chose **license & mit** then on the consoel I will say next question:
+If you chose **license & mit** then on the console I will say next question:
 ```
 Write a your name:
 ```
@@ -500,6 +509,7 @@ Then he will ask you this:
 ```
 Write the text to translate
 ```
+___
 
 ## rename:
 If you chose **rename** then on the console I will say the next:
@@ -562,6 +572,35 @@ Write file remove: test.js
 test.js
 ```
 ___
+
+## read:
+If you chose **read** then on the console I will say the next:
+```
+Select to read
+normal
+```
+___
+
+## normal-read:
+If you chose **read & normal** then on the console I will say the next:
+```
+Write file read
+```
+
+## Explame:
+### Console: 
+```
+Select the option you want to execute: remove
+Select option remove: normal
+Write file read: test.js
+```
+
+### Say on the console:
+```js
+console.log('Hello world!');
+```
+___
+
 
 ## sofware license:
 ```

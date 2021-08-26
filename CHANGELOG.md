@@ -1,11 +1,14 @@
 ## Upgrades:    
-*version: 2.4.3*
-  * Remove options added
+*version: 2.5.4*
+  * Read options added
   * Fixed a small error with the documentation
-  * CHANGELOG.md file added
 ____
 
 ## Changelog:
+2.5.4
+  * Read options added
+  * Fixed a small error with the documentation
+
 2.4.3
   * Remove options added
   * Fixed a small error with the documentation

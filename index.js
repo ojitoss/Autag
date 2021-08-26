@@ -7,7 +7,8 @@ const license = new autag.licenseManager();
 const mkdir = new autag.mkdirManager();
 const translate = new autag.translateManager();
 const rename = new autag.renameManager();
-const remove = new autag.removeManager()
+const remove = new autag.removeManager();
+const read = new autag.readManger();
 const inquirer = require('inquirer');
 
 inquirer.prompt([{
@@ -36,6 +37,9 @@ inquirer.prompt([{
         },{
             key: "remove",
             value: "remove"
+        },{
+            key: "read",
+            value: "read"
         }
     ]
 }]).then(anweser => {
@@ -167,6 +171,23 @@ inquirer.prompt([{
         }]).then(anweser2 => {
             if (anweser2.type === "normal") {
                 remove.normal();
+            }
+        });
+    }
+    if (anweser.options === "read") {
+        inquirer.prompt([{
+            type: "list",
+            name: "type",
+            message: "Select type read",
+            choices: [
+                {
+                    key: "normal",
+                    value: "normal"
+                }
+            ]
+        }]).then(anweser2 => {
+            if (anweser2.type === "normal") {
+                read.normal();
             }
         });
     }
