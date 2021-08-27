@@ -1,5 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const highlight = require('cli-highlight').highlight;
 
 module.exports = {
     normalRead: function() {
@@ -9,7 +10,7 @@ module.exports = {
         }]).then(anweser => {
             fs.readFile(`./${anweser.file}`, 'utf-8' , (error, data) => {
                 if (error) console.log(error);
-                console.log(data);
+                console.log(highlight(data));
             });
         });
     }

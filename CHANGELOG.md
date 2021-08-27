@@ -1,9 +1,14 @@
 ## Upgrades:    
-*version: 2.6.5*
-  * The interface of the cli autag has been improved
+*version: 2.7.5*
+  * Now the red option has syntax highlighting
+  * Fixed a small bug with the terminal
 ____
 
 ## Changelog:
+2.7.5
+  * Now the red option has syntax highlighting
+  * Fixed a small bug with the terminal
+
 2.6.5
   * The interface of the cli autag has been improved
 
