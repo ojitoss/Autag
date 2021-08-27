@@ -29,13 +29,16 @@ autag is a tool that generates code automatically through the terminal.
 ____
 
 ## Upgrades:    
-*version: 2.5.5*
-  * Fixed a small error with the documentation
+*version: 2.6.5*
+  * The interface of the cli autag has been improved
 ____
 
 ## Changelog:
+2.6.5
+  * The interface of the cli autag has been improved
+
 2.5.5
-  * ixed a small error with the documentation
+  * Fixed a small error with the documentation
 
 2.5.4
   * Read options added

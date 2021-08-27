@@ -1,9 +1,12 @@
 ## Upgrades:    
-*version: 2.5.5*
-  * Fixed a small error with the documentation
+*version: 2.6.5*
+  * The interface of the cli autag has been improved
 ____
 
 ## Changelog:
+2.6.5
+  * The interface of the cli autag has been improved
+
 2.5.5
   * Fixed a small error with the documentation
 

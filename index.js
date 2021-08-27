@@ -192,3 +192,11 @@ inquirer.prompt([{
         });
     }
 });
+
+console.log('\n\n\n\n\t\t\t\t\t\t  //= AUTAG =\\');
+console.log('\n\t\t\t\t\t//= automatic code generator =\\');
+console.log('\t\t\t\t\t  //= In charge of: ojitos =\\');
+console.log('\t\t\t\t//= npm page: https://www.npmjs.com/package/autag =\\');
+console.log('\t\t\t\t\t//= github: https://github.com/ojitoss =\\');
+console.log('\t\t\t\t\t      //= Version:  2.5.5 =\\');
+console.log('\t\t\t\t\t         //= MIT License =\\');
