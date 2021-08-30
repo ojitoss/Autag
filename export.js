@@ -6,5 +6,7 @@ module.exports = {
     translateManager: require('./functions/translate/global.js'),
     renameManager: require('./functions/rename/global.js'),
     removeManager: require('./functions/remove/global.js'),
-    readManger: require('./functions/read/global.js')
+    readManger: require('./functions/read/global.js'),
+    localManager: require('./functions/local/global.js'),
+    renderManager: require('./functions/render/global.js')
 }

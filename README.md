@@ -4,11 +4,13 @@
 autag is a tool that generates code automatically through the terminal.
 
 ## Parts of documentation:
+  * [important](#important)
   * [Upgrades](#Upgrades)
   * [Changelog](#Changelog)
   * [Installation and Usage](#Usage)
   * [File](#file)
     * [md](#md)
+    * [create](#create)
   * [Ignore](#ignore)
     * [npm](#npm)
     * [git](#git)
@@ -25,16 +27,29 @@ autag is a tool that generates code automatically through the terminal.
     * [normal](#normal-remove)
   * [read](#read)
     * [normal](#normal-read)
+  * [local](#local)
+    * [normal](#normal-local)
+  * [render](#render)
+    * [file](#file-render)
+    * [text](#text-render)
   * [license sofware](#sofware)
 ____
 
+## important:
+  - In the 'local and render' commands you must have express and the template engine installed
+___
+
 ## Upgrades:    
-*version: 2.7.5*
-  * Now the red option has syntax highlighting
-  * Fixed a small bug with the terminal
+*version: 2.8.5*
+  * Local and render options added
+  * Option create added options file
 ____
 
 ## Changelog:
+2.8.5
+  * Local and render options added
+  * Option create added options file
+
 2.7.5
   * Now the red option has syntax highlighting
   * Fixed a small bug with the terminal
@@ -111,6 +126,8 @@ translate
 rename
 remove
 read
+local
+render
 ```
 ___
 
@@ -349,6 +366,20 @@ Write a text to quote: Hello!
 > Hello!
 ```
 ___
+
+## create:
+If you chose **file & create** then on the console I will say the next question:
+```
+Write file name file
+```
+
+## Explame:
+### Console: 
+```
+Select the option you want to execute: file
+Select a format: create
+Write file name file: test.js
+```
 
 ## ignore:
 If you chose **ignore** then on the console I will say the next:
@@ -611,6 +642,263 @@ console.log('Hello world!');
 ```
 ___
 
+## local:
+If you chose **local** then on the console I will say the next:
+```
+Select type local
+normal
+```
+___
+
+## normal-local:
+If you chose **local & normal** then on the console I will say the next:
+```
+Write folder to views
+```
+
+Then he will ask you this:
+```
+Write view endgine
+```
+
+Then he will ask you this:
+```
+Write port to localhost
+```
+
+## Explame:
+### Console:
+```
+Select the option you want to execute: local
+Write folder views: views
+Write view endgine: ejs
+Write portto localhost: 3000
+```
+
+### This will write to the 'localhost.js' file:
+```js
+const express = require("express");
+const path = require("path");
+const app = express();
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view endgine", "ejs");
+
+app.listen(3000, ()=> {
+    console.log("Server on port", 3000);
+})
+```
+___
+
+## local:
+If you chose **local** then on the console I will say the next:
+```
+Select type local
+normal
+```
+___
+
+## normal-local:
+If you chose **local & normal** then on the console I will say the next:
+```
+Write folder to views
+```
+
+Then he will ask you this:
+```
+Write view endgine
+```
+
+Then he will ask you this:
+```
+Write port to localhost
+```
+
+## Explame:
+### Console:
+```
+Select the option you want to execute: local
+Write folder views: views
+Write view endgine: ejs
+Write portto localhost: 3000
+```
+
+### This will write to the 'localhost.js' file:
+```js
+const express = require("express");
+const path = require("path");
+const app = express();
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view endgine", "ejs");
+
+app.listen(3000, ()=> {
+    console.log("Server on port", 3000);
+})
+```
+___
+
+## local:
+If you chose **local** then on the console I will say the next:
+```
+Select type local
+normal
+```
+___
+
+## normal-local:
+If you chose **local & normal** then on the console I will say the next:
+```
+Write folder to views
+```
+
+Then he will ask you this:
+```
+Write view endgine
+```
+
+Then he will ask you this:
+```
+Write port to localhost
+```
+
+## Explame:
+### Console:
+```
+Select the option you want to execute: local
+Select type local: normal
+Write folder views: views
+Write view endgine: ejs
+Write portto localhost: 3000
+```
+
+### This will write to the 'localhost.js' file:
+```js
+const express = require("express");
+const path = require("path");
+const app = express();
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view endgine", "ejs");
+
+app.listen(3000, ()=> {
+    console.log("Server on port", 3000);
+})
+```
+___
+
+## render:
+If you chose **render** then on the console I will say the next:
+```
+Select type render
+file
+text
+```
+___
+
+## file-render:
+If you chose **render & file** then on the console I will say the next:
+```
+Select type petition
+get
+post
+put
+delete
+patch
+head
+options
+```
+
+Then he will ask you this:
+```
+Write route
+```
+
+Then he will ask you this:
+```
+Write file render
+```
+
+## Explame:
+### Console:
+```
+Select the option you want to execute: render
+Select type render: file
+Select type petition: get
+Write route: /
+Write file render: index.ejs
+```
+
+### This will write to the 'localhost.js' file:
+```js
+const express = require("express");
+const path = require("path");
+const app = express();
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view endgine", "ejs");
+
+app.listen(3000, ()=> {
+    console.log("Server on port", 3000);
+})
+
+app.get("/", (req, res)=> {
+  res.render('index.ejs');
+})
+```
+___
+
+## text-render:
+If you chose **render & text** then on the console I will say the next:
+```
+Select type petition
+get
+post
+put
+delete
+patch
+head
+options
+```
+
+Then he will ask you this:
+```
+Write route
+```
+
+Then he will ask you this:
+```
+Write text render
+```
+
+## Explame:
+### Console:
+```
+Select the option you want to execute: render
+Select type render: text
+Select type petition: get
+Write route: /
+Write text render: hello world!
+```
+
+### This will write to the 'localhost.js' file:
+```js
+const express = require("express");
+const path = require("path");
+const app = express();
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view endgine", "ejs");
+
+app.listen(3000, ()=> {
+    console.log("Server on port", 3000);
+})
+
+app.get("/", (req, res)=> {
+  res.send('hello world!');
+})
+```
+___
 
 ## sofware license:
 ```

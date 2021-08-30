@@ -9,6 +9,8 @@ const translate = new autag.translateManager();
 const rename = new autag.renameManager();
 const remove = new autag.removeManager();
 const read = new autag.readManger();
+const local = new autag.localManager();
+const render = new autag.renderManager();
 const inquirer = require('inquirer');
 
 inquirer.prompt([{
@@ -40,6 +42,12 @@ inquirer.prompt([{
         },{
             key: "read",
             value: "read"
+        },{
+            key: "local",
+            value: "local"
+        },{
+            key: "render",
+            value: "render"
         }
     ]
 }]).then(anweser => {
@@ -50,6 +58,10 @@ inquirer.prompt([{
             message: "Select a format",
             choices: [
                 {
+                    key: "crate",
+                    value: "create"
+                },,
+                {
                     key: "md",
                     value: "md"
                 }
@@ -57,6 +69,9 @@ inquirer.prompt([{
         }]).then(anweser2 => {
             if (anweser2.format === "md") {
                 file.md();
+            }
+            if (anweser2.format === "create") {
+                file.create();
             }
         });
     }
@@ -191,6 +206,46 @@ inquirer.prompt([{
             }
         });
     }
+    if (anweser.options === "local") {
+        inquirer.prompt([{
+            type: "list",
+            name: "type",
+            message: "Select type local",
+            choices: [
+                {
+                    key: "normal",
+                    value: "normal"
+                }
+            ]
+        }]).then(anweser2 => {
+            if (anweser2.type === 'normal') {
+                local.normal();
+            } 
+        });
+    }
+    if (anweser.options === "render") {
+        inquirer.prompt([{
+            type: "list",
+            name: "type",
+            message: "Select type render",
+            choices: [
+                {
+                    key: "file",
+                    value: "file"
+                },{
+                    key: "text",
+                    value: "text"
+                }
+            ]
+        }]).then(anweser2 => {
+            if (anweser2.type === "file") {
+                render.file();
+            }
+            if (anweser2.type === "text") {
+                render.text();
+            }
+        });
+    }
 });
 
 console.log('\n\n\n\n\t\t\t\t\t\t  //= AUTAG =\\');
@@ -198,5 +253,5 @@ console.log('\n\t\t\t\t\t//= automatic code generator =\\');
 console.log('\t\t\t\t\t  //= In charge of: ojitos =\\');
 console.log('\t\t\t\t//= npm page: https://www.npmjs.com/package/autag =\\');
 console.log('\t\t\t\t\t//= github: https://github.com/ojitoss =\\');
-console.log('\t\t\t\t\t      //= Version:  2.7.5 =\\');
+console.log('\t\t\t\t\t      //= Version:  2.8.5 =\\');
 console.log('\t\t\t\t\t         //= MIT License =\\');

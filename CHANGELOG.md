@@ -1,10 +1,14 @@
 ## Upgrades:    
-*version: 2.7.5*
-  * Now the red option has syntax highlighting
-  * Fixed a small bug with the terminal
+*version: 2.8.5*
+  * Local and render options added
+  * Option create added options file
 ____
 
 ## Changelog:
+2.8.5
+  * Local and render options added
+  * Option create added options file
+
 2.7.5
   * Now the red option has syntax highlighting
   * Fixed a small bug with the terminal
