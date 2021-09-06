@@ -1,4 +1,5 @@
 module.exports = {
+    initManager: require('./functions/init/global.js'),
     fileManager: require('./functions/file/global.js'),
     ignoreManager: require('./functions/ignore/global.js'),
     licenseManager: require('./functions/license/global.js'),

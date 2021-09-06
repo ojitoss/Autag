@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+const fs = require('fs');
+const { initNormal } = require('./functions/init/normal.js');
+if (!fs.existsSync('.autag')) initNormal();
 const autag = require('./export.js');
 const file = new autag.fileManager();
 const ignore = new autag.ignoreManager();
@@ -60,7 +63,7 @@ inquirer.prompt([{
                 {
                     key: "crate",
                     value: "create"
-                },,
+                },
                 {
                     key: "md",
                     value: "md"
@@ -105,21 +108,7 @@ inquirer.prompt([{
         });
     }
     if (anweser.options === "mkdir") {
-        inquirer.prompt([{
-            type: "list",
-            name: "type",
-            message: "Select a type folder",
-            choices: [
-                {
-                    key: "normal",
-                    value: "normal"
-                }
-            ]
-        }]).then(anweser2 => {
-            if (anweser2.type === "normal") {
-                mkdir.normal();
-            }
-        });
+        mkdir.normal();
     }
     if (anweser.options === "license") {
         inquirer.prompt([{
@@ -139,89 +128,19 @@ inquirer.prompt([{
         });
     }
     if (anweser.options === "translate") {
-        inquirer.prompt([{
-            type: "list",
-            name: "type",
-            message: "Select the type of translation you are going to execute",
-            choices: [
-                {
-                    key: "text",
-                    value: "text"
-                }
-            ]
-        }]).then(anweser2 => {
-            if (anweser2.type === "text") {
-                translate.text();
-            }
-        });
+        translate.text();
     }
     if (anweser.options === "rename") {
-        inquirer.prompt([{
-            type: "list",
-            name: "type",
-            message: "Select to type of rename",
-            choices: [
-                {
-                    key: "normal",
-                    value: "normal"
-                }
-            ]
-        }]).then(anweser2 => {
-            if (anweser2.type === "normal") {
-                rename.normal();
-            }
-        });
+        rename.normal();
     }
     if (anweser.options === "remove") {
-        inquirer.prompt([{
-            type: "list",
-            name: "type",
-            message: "Select to remove",
-            choices: [
-                {
-                    key: "normal",
-                    value: "normal"
-                }
-            ]
-        }]).then(anweser2 => {
-            if (anweser2.type === "normal") {
-                remove.normal();
-            }
-        });
+        remove.normal();
     }
     if (anweser.options === "read") {
-        inquirer.prompt([{
-            type: "list",
-            name: "type",
-            message: "Select type read",
-            choices: [
-                {
-                    key: "normal",
-                    value: "normal"
-                }
-            ]
-        }]).then(anweser2 => {
-            if (anweser2.type === "normal") {
-                read.normal();
-            }
-        });
+        read.normal();
     }
     if (anweser.options === "local") {
-        inquirer.prompt([{
-            type: "list",
-            name: "type",
-            message: "Select type local",
-            choices: [
-                {
-                    key: "normal",
-                    value: "normal"
-                }
-            ]
-        }]).then(anweser2 => {
-            if (anweser2.type === 'normal') {
-                local.normal();
-            } 
-        });
+        local.normal();
     }
     if (anweser.options === "render") {
         inquirer.prompt([{
@@ -249,9 +168,11 @@ inquirer.prompt([{
 });
 
 console.log('\n\n\n\n\t\t\t\t\t\t  //= AUTAG =\\');
-console.log('\n\t\t\t\t\t//= automatic code generator =\\');
+console.log('\n\t\t\t\t\t   //= process automation =\\');
 console.log('\t\t\t\t\t  //= In charge of: ojitos =\\');
 console.log('\t\t\t\t//= npm page: https://www.npmjs.com/package/autag =\\');
 console.log('\t\t\t\t\t//= github: https://github.com/ojitoss =\\');
 console.log('\t\t\t\t\t      //= Version:  2.8.5 =\\');
 console.log('\t\t\t\t\t         //= MIT License =\\');
+
+if (fs.existsSync('.autag')) return;

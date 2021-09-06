@@ -1,51 +1,59 @@
-# atuag - Automatic code generator
-[gitHub repository](https://github.com/ojitoss/Autag)
+![autag_logo](assets/autag_logo_complete.png)
 
-autag is a tool that generates code automatically through the terminal.
+[![npm](https://badge.fury.io/js/autag.svg)](http://badge.fury.io/js/autag)
+[![downloads](https://img.shields.io/npm/dt/autag.svg)](https://img.shields.io/npm/dt/autag.svg)
+
+> autag is a process automation tool through the terminal.
+
+[![NPM](https://nodei.co/npm/autag.png)](https://www.npmjs.com/package/autag)
 
 ## Parts of documentation:
   * [important](#important)
-  * [Upgrades](#Upgrades)
-  * [Changelog](#Changelog)
-  * [Installation and Usage](#Usage)
+  * [Upgrades](#upgrades)
+  * [Changelog](#changelog)
+  * [Installation and Usage](#usage)
+  * [Config file](#config-file)
   * [File](#file)
-    * [md](#md)
-    * [create](#create)
+    * [md](#md-file)
+    * [create](#creat-file)
   * [Ignore](#ignore)
-    * [npm](#npm)
-    * [git](#git)
-    * [eslint](#eslint)
-  * [mkdir](#mkdir)
-    * [normal](#normal)
+    * [npm](#npm-ignore)
+    * [git](#git-ignore)
+    * [eslint](#eslint-ignore)
+  * [Mkdir](#mkdir)
   * [License](#license)
-    * [mit](#mit)
-  * [translate](#translate)
-    * [text](#text-translate)
-  * [rename](#rename)
-    * [normal](#normal-rename)
-  * [remove](#remove)
-    * [normal](#normal-remove)
-  * [read](#read)
-    * [normal](#normal-read)
+    * [mit](#mit-license)
+  * [Translate](#translate)
+  * [Rename](#rename)
+  * [Remove](#remove)
+  * [Read](#read)
   * [local](#local)
-    * [normal](#normal-local)
-  * [render](#render)
+  * [Render](#render)
     * [file](#file-render)
     * [text](#text-render)
-  * [license sofware](#sofware)
+  * [license sofware](#license-software)
 ____
 
 ## important:
+  - By default a folder called ```.autag``` will be created where the configuration file is and when you use some commands other files will be created, do not delete them or autag will not work
   - In the 'local and render' commands you must have express and the template engine installed
 ___
 
-## Upgrades:    
-*version: 2.8.5*
-  * Local and render options added
-  * Option create added options file
+## upgrades:    
+*version: 3.0.0*
+  * Added ```.autag``` folder for some settings
+  * Added a config file to configure some autag stuff
+  * Documentation was improved
+  * Fixed 'README.md' problem
 ____
 
-## Changelog:
+## changelog:
+3.0.0
+  * Added '.autag' folder for some settings
+  * Added a config file to configure some autag stuff
+  * Documentation was improved
+  * Fixed 'README.md' problem
+
 2.8.5
   * Local and render options added
   * Option create added options file
@@ -107,10 +115,10 @@ ____
   * You could create md and LICENSE files
 ____
 
-## Installation:
+## installation:
     npm install autag
 
-# Usage:
+# usage:
 To start using **autag** you must type the following command:
 ```
 npx autag
@@ -130,6 +138,25 @@ local
 render
 ```
 ___
+
+## config-file:
+In the folder ```.autag``` a file ```config.json``` is created where you will be able to configure autag.
+
+### In the config.json paste this content:
+```json
+{
+  "paths": {
+    "localhost": {
+      "name": "",
+      "rout": ""
+    }
+  }
+}
+```
+- paths: The routes of some commands are configured.
+  - localhost: It is used to put the name and path of the localhost.
+    - name: It is used to name the localhost of the local option and render.
+    - route: It is used to put the localhost path of the local option and render.
 
 ## file:
 If you chose **file** then on the console I will say the next:
@@ -453,14 +480,6 @@ ___
 ## mkdir:
 If you chose **mkdir** then on the console I will say the next:
 ```
-Select a type folder:
-normal
-```
-___
-
-## normal:
-If you chose **mkdir & normal** then on the console I will say the next:
-```
 Write a name folder
 ```
 
@@ -468,7 +487,6 @@ Write a name folder
 ### Console:
 ```
 Select the option you want to execute: mkdir
-Select type folder: normal
 Write a name folder: hello
 ```
 create a folder 'hello'
@@ -532,15 +550,6 @@ ___
 ## translate:
 If you chose **translate** then on the console I will say the next:
 ```
-Select the type of translation you are going to execute
-file
-text
-```
-___
-
-## text-translate:
-If you chose **translate & file** then on the console I will say the next:
-```
 Select the language you want to translate
 en 
 es
@@ -555,14 +564,6 @@ ___
 ## rename:
 If you chose **rename** then on the console I will say the next:
 ```
-Select the type of rename
-normal
-```
-___
-
-## normal-rename:
-If you chose **rename & normal** then on the console I will say the next:
-```
 Write file to rename
 ```
 
@@ -575,7 +576,6 @@ Write new file rename
 ### Console: 
 ```
 Select the option you want to execute: rename
-Select option of rename: normal
 Write file to rename: test.js
 Write new file rename: testing.js
 ```
@@ -589,14 +589,6 @@ ___
 ## remove:
 If you chose **remove** then on the console I will say the next:
 ```
-Select to remove
-normal
-```
-___
-
-## normal-remove:
-If you chose **remove & normal** then on the console I will say the next:
-```
 Write file remove
 ```
 
@@ -604,7 +596,6 @@ Write file remove
 ### Console: 
 ```
 Select the option you want to execute: remove
-Select option remove: normal
 Write file remove: test.js
 ```
 
@@ -617,14 +608,6 @@ ___
 ## read:
 If you chose **read** then on the console I will say the next:
 ```
-Select to read
-normal
-```
-___
-
-## normal-read:
-If you chose **read & normal** then on the console I will say the next:
-```
 Write file read
 ```
 
@@ -632,7 +615,6 @@ Write file read
 ### Console: 
 ```
 Select the option you want to execute: remove
-Select option remove: normal
 Write file read: test.js
 ```
 
@@ -645,14 +627,6 @@ ___
 ## local:
 If you chose **local** then on the console I will say the next:
 ```
-Select type local
-normal
-```
-___
-
-## normal-local:
-If you chose **local & normal** then on the console I will say the next:
-```
 Write folder to views
 ```
 
@@ -670,103 +644,6 @@ Write port to localhost
 ### Console:
 ```
 Select the option you want to execute: local
-Write folder views: views
-Write view endgine: ejs
-Write portto localhost: 3000
-```
-
-### This will write to the 'localhost.js' file:
-```js
-const express = require("express");
-const path = require("path");
-const app = express();
-
-app.set("views", path.join(__dirname, "views"));
-app.set("view endgine", "ejs");
-
-app.listen(3000, ()=> {
-    console.log("Server on port", 3000);
-})
-```
-___
-
-## local:
-If you chose **local** then on the console I will say the next:
-```
-Select type local
-normal
-```
-___
-
-## normal-local:
-If you chose **local & normal** then on the console I will say the next:
-```
-Write folder to views
-```
-
-Then he will ask you this:
-```
-Write view endgine
-```
-
-Then he will ask you this:
-```
-Write port to localhost
-```
-
-## Explame:
-### Console:
-```
-Select the option you want to execute: local
-Write folder views: views
-Write view endgine: ejs
-Write portto localhost: 3000
-```
-
-### This will write to the 'localhost.js' file:
-```js
-const express = require("express");
-const path = require("path");
-const app = express();
-
-app.set("views", path.join(__dirname, "views"));
-app.set("view endgine", "ejs");
-
-app.listen(3000, ()=> {
-    console.log("Server on port", 3000);
-})
-```
-___
-
-## local:
-If you chose **local** then on the console I will say the next:
-```
-Select type local
-normal
-```
-___
-
-## normal-local:
-If you chose **local & normal** then on the console I will say the next:
-```
-Write folder to views
-```
-
-Then he will ask you this:
-```
-Write view endgine
-```
-
-Then he will ask you this:
-```
-Write port to localhost
-```
-
-## Explame:
-### Console:
-```
-Select the option you want to execute: local
-Select type local: normal
 Write folder views: views
 Write view endgine: ejs
 Write portto localhost: 3000
@@ -900,7 +777,7 @@ app.get("/", (req, res)=> {
 ```
 ___
 
-## sofware license:
+## license-software:
 ```
 MIT License
 

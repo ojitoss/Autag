@@ -1,10 +1,18 @@
-## Upgrades:    
-*version: 2.8.5*
-  * Local and render options added
-  * Option create added options file
+## upgrades:    
+*version: 3.0.0*
+  * Added ```.autag``` folder for some settings
+  * Added a config file to configure some autag stuff
+  * Documentation was improved
+  * Fixed 'README.md' problem
 ____
 
-## Changelog:
+## changelog:
+3.0.0
+  * Added '.autag' folder for some settings
+  * Added a config file to configure some autag stuff
+  * Documentation was improved
+  * Fixed 'README.md' problem
+
 2.8.5
   * Local and render options added
   * Option create added options file
