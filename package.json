@@ -21,7 +21,7 @@
     "@k3rn31p4nic/google-translate-api": "^1.1.1",
     "cli-highlight": "^2.1.11",
     "express": "^4.17.1",
-    "fs": "0.0.1-security",
+    "fs": "0.0.2",
     "inquirer": "^8.1.2"
   },
   "devDependencies": {
