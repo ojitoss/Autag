@@ -9,8 +9,8 @@
 
 ## Parts of documentation:
   * [important](#important)
-  * [Upgrades](#upgrades)
-  * [Changelog](#changelog)
+  * [Upgrades](#upgrades-and-changelog)
+  * [Changelog](#upgrades-and-changelog)
   * [Installation and Usage](#usage)
   * [Config file](#config-file)
   * [File](#file)
@@ -31,6 +31,7 @@
   * [Render](#render)
     * [file](#file-render)
     * [text](#text-render)
+  * [Copy](#copy)
   * [license sofware](#license-software)
 ____
 
@@ -39,15 +40,23 @@ ____
   - In the 'local and render' commands you must have express and the template engine installed
 ___
 
+<details><summary id="upgrades-and-changelog">upgrades and changelog</summary>
+
 ## upgrades:    
-*version: 3.0.0*
-  * Added ```.autag``` folder for some settings
-  * Added a config file to configure some autag stuff
+*version: 3.1.1*
+  * Copy options added
+  * .npmignore file added
+  * Fixed a small bug with the terminal
   * Documentation was improved
-  * Fixed 'README.md' problem
 ____
 
 ## changelog:
+3.1.1
+  * Copy options added
+  * .npmignore file added
+  * Fixed a small bug with the terminal
+  * Documentation was improved
+
 3.0.0
   * Added '.autag' folder for some settings
   * Added a config file to configure some autag stuff
@@ -114,6 +123,7 @@ ____
 1.0.0
   * You could create md and LICENSE files
 ____
+</details><br>
 
 ## installation:
     npm install autag
@@ -777,6 +787,33 @@ app.get("/", (req, res)=> {
 ```
 ___
 
+## copy:
+If you chose **copy** then on the console I will say the next:
+```
+Write file to copy content
+```
+
+Then he will ask you this:
+```
+Write file to paste content
+```
+
+## Explame:
+### Console: 
+```
+Select the option you want to execute: copy
+Write file copy content: index.js
+Write file paste content: test.js
+```
+
+### Write to file 'test.js':
+```js
+console.log('Hello world!');
+```
+___
+
+<details><summary id="license-software">license software</summary>
+
 ## license-software:
 ```
 MIT License
@@ -801,3 +838,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+</details>

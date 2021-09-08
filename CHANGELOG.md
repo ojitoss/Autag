@@ -1,12 +1,18 @@
 ## upgrades:    
-*version: 3.0.0*
-  * Added ```.autag``` folder for some settings
-  * Added a config file to configure some autag stuff
+*version: 3.1.1*
+  * Copy options added
+  * .npmignore file added
+  * Fixed a small bug with the terminal
   * Documentation was improved
-  * Fixed 'README.md' problem
 ____
 
 ## changelog:
+3.1.1
+  * Copy options added
+  * .npmignore file added
+  * Fixed a small bug with the terminal
+  * Documentation was improved
+
 3.0.0
   * Added '.autag' folder for some settings
   * Added a config file to configure some autag stuff
@@ -72,3 +78,4 @@ ____
 
 1.0.0
   * You could create md and LICENSE files
+____
