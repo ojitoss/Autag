@@ -2,6 +2,7 @@
 
 [![npm](https://badge.fury.io/js/autag.svg)](http://badge.fury.io/js/autag)
 [![downloads](https://img.shields.io/npm/dt/autag.svg)](https://img.shields.io/npm/dt/autag.svg)
+[![NPM](https://img.shields.io/npm/l/autag)](https://img.shields.io/npm/l/autag)
 
 > autag is a process automation tool through the terminal.
 
@@ -32,6 +33,7 @@
     * [file](#file-render)
     * [text](#text-render)
   * [Copy](#copy)
+  * [Minify](#minify)
   * [license sofware](#license-software)
 ____
 
@@ -43,14 +45,14 @@ ___
 <details><summary id="upgrades-and-changelog">upgrades and changelog</summary>
 
 ## upgrades:    
-*version: 3.1.1*
-  * Copy options added
-  * .npmignore file added
-  * Fixed a small bug with the terminal
-  * Documentation was improved
+*version: 3.2.1*
+  * Minify options added
 ____
 
 ## changelog:
+3.2.1
+  * Minify options added
+
 3.1.1
   * Copy options added
   * .npmignore file added
@@ -809,6 +811,34 @@ Write file paste content: test.js
 ### Write to file 'test.js':
 ```js
 console.log('Hello world!');
+```
+___
+
+## minify:
+If you chose **minify** then on the console I will say the next:
+```
+Select format to minify
+js
+css
+html
+```
+
+Then he will ask you this:
+```
+Write file to minify
+```
+
+## Explame:
+### Console: 
+```
+Select the option you want to execute: copy
+Select format to minify: js
+Write file to minify: test
+```
+
+### Say to console:
+```js
+const test="test";
 ```
 ___
 

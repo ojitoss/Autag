@@ -10,5 +10,6 @@ module.exports = {
     readManger: require('./functions/read/global.js'),
     localManager: require('./functions/local/global.js'),
     renderManager: require('./functions/render/global.js'),
-    copyManager: require('./functions/copy/global.js')
+    copyManager: require('./functions/copy/global.js'),
+    minifyManager: require('./functions/minify/global.js')
 }
