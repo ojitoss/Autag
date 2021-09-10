@@ -1,12 +1,12 @@
 ## upgrades:    
-*version: 3.1.1*
-  * Copy options added
-  * .npmignore file added
-  * Fixed a small bug with the terminal
-  * Documentation was improved
+*version: 3.2.1*
+  * Minify options added
 ____
 
 ## changelog:
+3.2.1
+  * Minify options added
+
 3.1.1
   * Copy options added
   * .npmignore file added
@@ -78,4 +78,3 @@ ____
 
 1.0.0
   * You could create md and LICENSE files
-____
