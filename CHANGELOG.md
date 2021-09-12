@@ -1,9 +1,14 @@
 ## upgrades:    
-*version: 3.2.1*
-  * Minify options added
+*version: 3.2.2*
+  * Fixed an issue that made it impossible to use autag
+  * Fixed a small error with the documentation
 ____
 
 ## changelog:
+3.2.2
+  * Fixed an issue that made it impossible to use autag
+  * Fixed a small error with the documentation
+
 3.2.1
   * Minify options added
 

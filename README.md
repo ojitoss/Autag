@@ -38,18 +38,23 @@
 ____
 
 ## important:
-  - By default a folder called ```.autag``` will be created where the configuration file is and when you use some commands other files will be created, do not delete them or autag will not work
+- In the folder `` `node_modules / autag``` there will be the folder` `` .autag``` where the configuration file is and when you use some commands other files will be created, do not delete them or autag will not work
   - In the 'local and render' commands you must have express and the template engine installed
 ___
 
 <details><summary id="upgrades-and-changelog">upgrades and changelog</summary>
 
 ## upgrades:    
-*version: 3.2.1*
-  * Minify options added
+*version: 3.2.2*
+  * Fixed an issue that made it impossible to use autag
+  * Fixed a small error with the documentation
 ____
 
 ## changelog:
+3.2.2
+  * Fixed an issue that made it impossible to use autag
+  * Fixed a small error with the documentation
+
 3.2.1
   * Minify options added
 
@@ -148,13 +153,15 @@ remove
 read
 local
 render
+copy
+minify
 ```
 ___
 
 ## config-file:
 In the folder ```.autag``` a file ```config.json``` is created where you will be able to configure autag.
 
-### In the config.json paste this content:
+### In config.json there will be this content::
 ```json
 {
   "paths": {
