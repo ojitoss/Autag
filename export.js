@@ -11,5 +11,6 @@ module.exports = {
     localManager: require('./functions/local/global.js'),
     renderManager: require('./functions/render/global.js'),
     copyManager: require('./functions/copy/global.js'),
-    minifyManager: require('./functions/minify/global.js')
+    minifyManager: require('./functions/minify/global.js'),
+    searchManager: require('./functions/search/global.js')
 }

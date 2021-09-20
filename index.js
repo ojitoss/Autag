@@ -16,6 +16,7 @@ const local = new autag.localManager();
 const render = new autag.renderManager();
 const copy = new autag.copyManager();
 const minify = new autag.minifyManager();
+const search = new autag.searchManager();
 const inquirer = require('inquirer');
 
 inquirer.prompt([{
@@ -59,6 +60,9 @@ inquirer.prompt([{
         },{
             key: "minify",
             value: "minify"
+        },{
+            key: "search",
+            value: "search"
         }
     ]
 }]).then(anweser => {
@@ -173,12 +177,9 @@ inquirer.prompt([{
             }
         });
     }
-    if (anweser.options === "copy") {
-        copy.normal();
-    }
-    if (anweser.options === "minify") {
-        minify.normal();
-    }
+    if (anweser.options === "copy") copy.normal();
+    if (anweser.options === "minify") minify.normal();
+    if (anweser.options === "search") search.normal();
 });
 
 console.log('\n\n\n\n\t\t\t\t\t\t  //= AUTAG =\\');
@@ -186,7 +187,7 @@ console.log('\n\t\t\t\t\t   //= process automation =\\');
 console.log('\t\t\t\t\t  //= In charge of: ojitos =\\');
 console.log('\t\t\t\t//= npm page: https://www.npmjs.com/package/autag =\\');
 console.log('\t\t\t\t\t//= github: https://github.com/ojitoss =\\');
-console.log('\t\t\t\t\t      //= Version:  3.2.2 =\\');
+console.log('\t\t\t\t\t      //= Version:  3.3.3 =\\');
 console.log('\t\t\t\t\t         //= MIT License =\\');
 
 if (fs.existsSync('.autag')) return;
