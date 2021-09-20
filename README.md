@@ -8,7 +8,7 @@
 
 [![NPM](https://nodei.co/npm/autag.png)](https://www.npmjs.com/package/autag)
 
-## Parts of documentation:
+## Table of contents:
   * [important](#important)
   * [Upgrades](#upgrades-and-changelog)
   * [Changelog](#upgrades-and-changelog)
@@ -34,26 +34,27 @@
     * [text](#text-render)
   * [Copy](#copy)
   * [Minify](#minify)
+  * [Search](#search)
   * [license sofware](#license-software)
 ____
 
 ## important:
-- In the folder `` `node_modules / autag``` there will be the folder` `` .autag``` where the configuration file is and when you use some commands other files will be created, do not delete them or autag will not work
-  - In the 'local and render' commands you must have express and the template engine installed
+- In the folder ```node_modules / autag``` there will be the folder ```.autag``` where the configuration file is and when you use some commands other files will be created, do not delete them or autag will not work
+- In the 'local and render' commands you must have express and the template engine installed
 ___
 
 <details><summary id="upgrades-and-changelog">upgrades and changelog</summary>
 
 ## upgrades:    
-*version: 3.2.2*
-  * Fixed an issue that made it impossible to use autag
-  * Fixed a small error with the documentation
+*version: 3.3.3*
+  * Search options added
+  * Fixed a small error with documentation
 ____
 
 ## changelog:
-3.2.2
-  * Fixed an issue that made it impossible to use autag
-  * Fixed a small error with the documentation
+3.3.3
+  * Search options added
+  * Fixed a small error with documentation
 
 3.2.1
   * Minify options added
@@ -155,6 +156,7 @@ local
 render
 copy
 minify
+search
 ```
 ___
 
@@ -838,14 +840,39 @@ Write file to minify
 ## Explame:
 ### Console: 
 ```
-Select the option you want to execute: copy
+Select the option you want to execute: minify
 Select format to minify: js
 Write file to minify: test
 ```
 
 ### Say to console:
 ```js
-const test="test";
+const test ="test";
+```
+___
+
+## search:
+If you chose **search** then on the console I will say the next:
+```
+Write file a search
+```
+
+Then he will ask you this:
+```
+Write text a sarch
+```
+
+## Explame:
+### Console: 
+```
+Select the option you want to execute: minify
+Write file a search: index.js
+Write text a search: test
+```
+
+### Say to console:
+```js
+true
 ```
 ___
 

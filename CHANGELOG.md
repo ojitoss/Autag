@@ -1,13 +1,13 @@
 ## upgrades:    
-*version: 3.2.2*
-  * Fixed an issue that made it impossible to use autag
-  * Fixed a small error with the documentation
+*version: 3.3.3*
+  * Search options added
+  * Fixed a small error with documentation
 ____
 
 ## changelog:
-3.2.2
-  * Fixed an issue that made it impossible to use autag
-  * Fixed a small error with the documentation
+3.3.3
+  * Search options added
+  * Fixed a small error with documentation
 
 3.2.1
   * Minify options added
