@@ -136,6 +136,9 @@ module.exports = {
                     message: "Select a type block",
                     choices: [
                         {
+                            key: "text",
+                            value: "Text"
+                        },{
                             key: "javascript",
                             value: "JavaScript"
                         },{
@@ -147,6 +150,13 @@ module.exports = {
                     name: "blockdata",
                     message: "Write a block data"
                 }]).then(anweser2 => {
+                    if (anweser2.typeblock === "Text") {
+                      fs.appendFile(`${anweser.file}.md`, '```txt\n' + anweser2.blockdata + "\n```\n", error => {
+                         if (error) {
+                              console.log(error);
+                        }
+                      });
+                    }
                     if (anweser2.typeblock === "JavaScript") {
                       fs.appendFile(`${anweser.file}.md`, '```javascript\n' + anweser2.blockdata + "\n```\n", error => {
                           if (error) {
