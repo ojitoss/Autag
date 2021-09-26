@@ -46,15 +46,25 @@ ___
 <details><summary id="upgrades-and-changelog">upgrades and changelog</summary>
 
 ## upgrades:    
-*version: 3.3.3*
-  * Search options added
+*version: 3.4.4*
+  * file options with suboption md is was improvided
   * Fixed a small error with documentation
+  * Fixed an issue that made it impossible to use autag
 ____
 
 ## changelog:
+3.4.4
+  * file options with suboption md is was improvided
+  * Fixed a small error with documentation
+  * Fixed an issue that made it impossible to use autag
+
 3.3.3
   * Search options added
   * Fixed a small error with documentation
+
+3.2.2
+  * Fixed an issue that made it impossible to use autag
+  * Fixed a small error with the documentation
 
 3.2.1
   * Minify options added
@@ -260,6 +270,7 @@ If you chose **block** then on the console I will say the next:
 Then he will ask you this:
 ```
 Select a type block
+Text
 JavaScript
 Python
 ```
